@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EmployeeManagement.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <%--    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <form runat="server">
+        <header id="header">
+            <div class="container">
+
+                <div class="logo float-left">
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <h1 class="text-light"><a href="#intro" class="scrollto"><span>Employee Management</span></a></h1>
+                    <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+                </div>
+
+                <nav class="main-nav float-right d-none d-lg-block">
+                    <ul>
+                        <li class="active">
+                            <a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Job">Job</a></li>
+                        <li><a runat="server" href="~/Department">Department</a></li>
+                        <li><a runat="server" href="~/Employee">Employee</a></li>
+                        <li>|</li>
+                        <li><a class="pull-right" href="#" runat="server" onserverclick="LogOut_ServerClick">Logout</a></li>
+                    </ul>
+                </nav>
+                <!-- .main-nav -->
+
+            </div>
+        </header>
+        <main id="main">
+            <section id="about">
+                <div class="container">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="section-bg">
+            <div class="footer-top">
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-6">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="footer-links">
+                                        <h4>Useful Links</h4>
+                                        <ul>
+                                            <li><a runat="server" href="~/">Home</a></li>
+                                            <li><a runat="server" href="~/Job">Job</a></li>
+                                            <li><a runat="server" href="~/Department">Department</a></li>
+                                            <li><a runat="server" href="~/Employee">Employee</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="form">
+
+                                <h4>Send us a message</h4>
+                                <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong>Employee Management</strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Employee Management
+        -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </footer>
+    </form>
+    <!-- #footer -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/mobile-nav/mobile-nav.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/counterup/counterup.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <%--<script src="contactform/contactform.js"></script>--%>
+
+    <!-- Template Main Javascript File -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
